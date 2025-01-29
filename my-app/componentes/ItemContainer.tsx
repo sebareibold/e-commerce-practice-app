@@ -4,7 +4,8 @@ import Item from './Item';
 
 const ItemContainer = () => {
     return (
-        <ScrollView style={styles.itemContainer}>
+        <View style={styles.container}>
+        <ScrollView style={styles.itemContainer} showsVerticalScrollIndicator={false}>
             <Item />
             <Item />
             <Item />
@@ -18,15 +19,19 @@ const ItemContainer = () => {
             <Item />
             <Item />
         </ScrollView>
+    </View>
     );
 };
 
 const styles = StyleSheet.create({
-    itemContainer: {
-        width: '100%',
-        flexDirection: 'column',   // Los elementos están apilados verticalmente
+    container: {
+        flex: 1, // Asegura que el contenedor ocupe todo el espacio disponible
+        width: '100%'
     },
-
+    itemContainer: {
+        flexGrow: 1, // Permite que el ScrollView crezca más allá de su tamaño inicial si es necesario
+        height: '100%'
+    },
 });
 
 export default ItemContainer;

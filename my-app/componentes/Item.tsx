@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     alignSelf: 'center',
-    height: '15%',
+    height: 250, // Tamaño consistente para cada item
     width: '94%',
     borderWidth: 2,        // Grosor del borde
     flexDirection: 'row', // Establece la dirección de los elementos en fila
