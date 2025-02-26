@@ -6,7 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 export default function TabLayout() {
 
   const styleScreenOption = {
-    tabBarActiveTintColor: '#11212d', // Con esto puedo cambiar el color de los iconos
+    tabBarActiveTintColor: '#11212d', // Con esto puedo cambiar el color de los iconos Seba
     headerStyle: {
       backgroundColor: '#ffff',
     },
