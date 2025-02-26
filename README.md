@@ -1,4 +1,5 @@
 # 📱 React Native App
+Este proyecto consiste en el desarrollo de una aplicación móvil con fines educativos, enfocada en el aprendizaje de React Native y en la creación de aplicaciones móviles. La aplicación será presentada como trabajo final en la materia Laboratorio de Programación.
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -6,9 +7,6 @@ Este proyecto fue desarrollado utilizando las siguientes tecnologías:
 
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
-- [React Navigation](https://reactnavigation.org/)
-- [Firebase](https://firebase.google.com/)
-- [Tailwind CSS para React Native (NativeWind)](https://www.nativewind.dev/)
 
 ## 📸 Capturas de Pantalla
 
@@ -44,6 +42,30 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 - **Para emuladores**:
   - Android: Asegúrate de tener un emulador configurado en Android Studio.
   - iOS: Usa `expo run:ios` si estás en macOS y tienes Xcode instalado.
+
+### ⚠️ Si desea crear nuevas funcionalidades, cree su propia rama para a futuro poder hacer su pull request
+
+1. **Actualizar la rama principal:**
+   ```sh
+   git checkout main
+   git pull origin main
+   ```
+
+2. **Crear una nueva rama para la funcionalidad:**
+   ```sh
+   git checkout -b nombre-de-la-funcionalidad
+   ```
+3. **Realizar los cambios y confirmarlos:**
+   ```sh
+   git checkout -b nombre-de-la-funcionalidad
+   ```
+4. **Subir la rama al repositorio remoto:**
+   ```sh
+   git checkout -b nombre-de-la-funcionalidad
+   ```
+5. **Crear un Pull Request en la plataforma del repositorio (GitHub, GitLab, etc.) para solicitar la fusión con main**
+  -  Asegúrate de describir claramente los cambios realizados y su propósito.
+  - Espera la revisión y aprobación del equipo antes de fusionar la rama.
 
 ---
 ✉️ **Contacto**: 
