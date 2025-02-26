@@ -34,8 +34,9 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ### 4️⃣ Iniciar el proyecto
 ```sh
- expo start
+   npx expo start
 ```
+
 
 ### 5️⃣ Probar en un dispositivo o emulador
 - **Para dispositivos físicos**: Escanea el código QR con la app de Expo Go.
