@@ -1,17 +1,14 @@
-import ItemContainer from '@/Componentes/ItemContainer';
-import { Text, View, StyleSheet } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import ItemsContainer from '@/Componentes/ItemsContainer';
+import ItemDetail from '@/Componentes/ItemDetail';
+
+const Stack = createStackNavigator();
 
 export default function VistaProductos() {
     return (
-        <View style={styles.container}>
-            <ItemContainer/>
-        </View>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="ListaProductos" component={ItemsContainer} />
+            <Stack.Screen name="ItemDetail" component={ItemDetail} />
+        </Stack.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1, 
-        backgroundColor: '#ffff',
-    },
-});

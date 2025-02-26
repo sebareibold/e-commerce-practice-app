@@ -25,6 +25,7 @@ const ItemContainer = () => {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor:'#ffff',
         flex: 1, // Asegura que el contenedor ocupe todo el espacio disponible
         width: '100%'
     },
