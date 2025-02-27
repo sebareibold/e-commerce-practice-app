@@ -34,9 +34,8 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ### 4️⃣ Iniciar el proyecto
 ```sh
-   npx expo start
+ expo start
 ```
-
 
 ### 5️⃣ Probar en un dispositivo o emulador
 - **Para dispositivos físicos**: Escanea el código QR con la app de Expo Go.
@@ -44,7 +43,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
   - Android: Asegúrate de tener un emulador configurado en Android Studio.
   - iOS: Usa `expo run:ios` si estás en macOS y tienes Xcode instalado.
 
-### ⚠️ Si desea crear nuevas funcionalidades, cree su propia rama para a futuro poder hacer su pull request
+## ☺️ Crea tu propia rama 
 
 1. **Actualizar la rama principal:**
    ```sh
@@ -62,11 +61,11 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    ```
 4. **Subir la rama al repositorio remoto:**
    ```sh
-   git checkout -b nombre-de-la-funcionalidad
+   git push origin nombre-de-la-funcionalidad
    ```
 5. **Crear un Pull Request en la plataforma del repositorio (GitHub, GitLab, etc.) para solicitar la fusión con main**
-  -  Asegúrate de describir claramente los cambios realizados y su propósito.
-  - Espera la revisión y aprobación del equipo antes de fusionar la rama.
+   -  Asegúrate de describir claramente los cambios realizados y su propósito.
+   - Espera la revisión y aprobación del equipo antes de fusionar la rama.
 
 ---
 ✉️ **Contacto**: 
