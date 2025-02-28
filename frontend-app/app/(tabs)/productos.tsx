@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import ItemsContainer from '@/Componentes/ItemsContainer';
-import ItemDetail from '@/Componentes/ItemDetail';
+import ItemsContainer from '../../Componentes/ItemsContainer/ItemsContainer';
+import ItemDetail from '../../Componentes/ItemDetail/ItemDetail';
 
 const Stack = createStackNavigator();
 

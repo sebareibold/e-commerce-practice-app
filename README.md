@@ -22,12 +22,13 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
  cd e-commerce-practice-app
 ```
 
-### 2️⃣ Instalar dependencias
+### 2️⃣ Instalar dependencias ( en el directorio frontend-app)
 ```sh
+ cd .\frontend-app\
  npm install
 ```
 
-### 3️⃣ Instalar Expo CLI (si no lo tienes)
+### 3️⃣ Instalar Expo CLI (si no lo tienes, estando en el directorio frontend-app)
 ```sh
  npm install -g expo-cli
 ```
