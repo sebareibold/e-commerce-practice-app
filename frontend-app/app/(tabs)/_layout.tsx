@@ -15,7 +15,7 @@ export default function TabLayout() {
     headerShadowVisible: false, // Asegura que la sombra no sea visible en versiones recientes
     headerTintColor: "#0f1626",
     tabBarStyle: {
-      position: "absolute",
+      position: "absolute" as "absolute",
       bottom: 15,
       borderColor: "#0f1626",
       borderRadius: 20,
@@ -41,7 +41,7 @@ export default function TabLayout() {
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
               color={color}
-              size={26}
+              size={24}
             />
           ),
         }}
@@ -55,7 +55,7 @@ export default function TabLayout() {
             <Ionicons
               name={focused ? "bag" : "bag-outline"}
               color={color}
-              size={26}
+              size={24}
             />
           ),
         }}
@@ -68,7 +68,7 @@ export default function TabLayout() {
             <Ionicons
               name={focused ? "cart" : "cart-outline"}
               color={color}
-              size={26}
+              size={24}
             />
           ),
         }}
