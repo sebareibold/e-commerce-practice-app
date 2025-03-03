@@ -4,7 +4,7 @@ import Item from '../Item/Item';
 
 const data = Array.from({ length: 12 }, (_, i) => ({ id: i.toString() })); // Simulación de datos
 
-const ItemsContainer = () => {
+const ItemListContainer = () => {
     return (
         <View style={styles.container}>
             <FlatList
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ItemsContainer;
+export default ItemListContainer;
