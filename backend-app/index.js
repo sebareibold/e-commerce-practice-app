@@ -2,15 +2,29 @@ const path = require('path');  // Importar el módulo path
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const routerCatalogo = require('./Routers/catalogo-router.js')
 
-/* app.get() responde solo a solicitudes, 
- Esta funcion tiene 2 argumentos:
- - path: Especifica la URL o ruta a la que quieres responder.'/' representa la raíz del servidor.
- - callback: Es una función que se ejecutará cada vez que el servidor reciba una solicitud GET en la ruta especificada. Esta función toma dos parámetros:
-	- request: Un objeto que contiene la información de la solicitud (como parámetros, cabeceras, etc.).
-	- response: Un objeto que permite enviar una respuesta al cliente.
-*/
+const productosRouter = require('./Routers/productos-router');
+// Middleware para analizar el cuerpo de las solicitudes
+app.use(express.json()); // Esto es necesario para recibir datos en formato JSON en el cuerpo de las peticiones
+
+// Rutas
+app.use("/productos", productosRouter); // Monta las rutas de productos bajo el path "/productos"
+
+// Ruta de prueba (opcional)
+app.get("/", (req, res) => {
+  res.send("Bienvenido a la API de productos");
+});
+
+// Configuración del puerto y arranque del servidor
+const PORT = process.env.PORT || 3000; // Usamos el puerto 3000 por defecto
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
+
+// CODIGO ANTERIOR
+
+/*
+//const routerCatalogo = require('./Routers/catalogo-router.js')
 
 app.use(express.static(path.join(__dirname, '../KingOfSouth')));
 
@@ -29,3 +43,4 @@ app.listen(process.env.PORT || 3000, () => {
 });
 
 app.use('/api/catalogo', routerCatalogo);
+*/
