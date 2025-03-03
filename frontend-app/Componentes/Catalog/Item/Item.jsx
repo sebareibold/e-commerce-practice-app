@@ -13,6 +13,7 @@ const Item = ({ item }) => {  // item es una prop que contiene los datos del art
       onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })} 
     >
       <Image
+ diseño-de-catalogo-y-detalles
         source={{ uri: item.image }}
         style={styles.image}
       />
