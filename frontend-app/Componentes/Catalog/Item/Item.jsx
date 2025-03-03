@@ -12,7 +12,7 @@ const Item = () => {
       onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })}
     >
       <Image
-        source={require("../../assets/images/reme.png")}
+        source={require("../../../assets/images/reme.png")}
         style={styles.image}
       />
       <View style={styles.secondSideItem}>
