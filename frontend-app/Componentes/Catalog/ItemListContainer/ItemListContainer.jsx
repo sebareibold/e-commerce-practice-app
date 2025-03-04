@@ -22,9 +22,9 @@ const ItemListContainer = () => {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
     useEffect(() => {
+        //const apiUrl = process.env.EXPO_PUBLIC_API_URL;
         //NO FUNCIONA LA VARIABLE DE ENTORNO
-        const apiUrl = '${process.env.EXPO_PUBLIC_API_URL}/productos';
-        fetch(apiUrl)
+        fetch('https://fakestoreapi.com/products')
             .then((response) => response.json())
             .then((json) => {
                 const mappedData = json.slice(0, TOTAL_ITEMS).map(item => ({
