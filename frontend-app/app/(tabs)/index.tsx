@@ -1,10 +1,11 @@
+import HomeContainer from '@/Componentes/Home/HomeContainer/HomeContainer';
 import { View, StyleSheet } from 'react-native';
 
 export default function Index() {
 
   return (
     <View style={styles.container}>
-      
+      <HomeContainer/>
     </View>
   );
 }
