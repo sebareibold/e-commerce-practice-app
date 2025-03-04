@@ -1,6 +1,6 @@
 const fs = require('fs');
 const rutaJsonProductos = './productos.json';
-const jsonProductos = JSON.parse(fs.readFileSync(rutaJsonProductos, 'utf-8')).data;
+const jsonProductos = JSON.parse(fs.readFileSync(rutaJsonProductos, 'utf-8'));
 
 
 // ------------------------------------ Relacionado a Productos ------------------------------------
@@ -14,7 +14,7 @@ const obtenerJSON = () => {
 //Relacionado a Get One
 const obtenerProductoPorId = (id) => {
     //Devuelvo los productos de una categoría específica
-    return jsonProductos.filter(producto => producto.id === id.toLowerCase);
+    return jsonProductos.filter(producto => producto.id === id);
 }
 
 //Relacionado a Post
