@@ -16,12 +16,14 @@ const ItemListContainer = () => {
             .then((response) => response.json())
             .then((json) => {
                 setData(json);
+
                 setLoading(false);
             })
             .catch((error) => {
                 console.error('Error en el fetch:', error);
                 setLoading(false);
             });
+
     }, []);
     
 
@@ -29,6 +31,14 @@ const ItemListContainer = () => {
     const filteredData = categoriaSeleccionada
         ? data.filter((item) => item.mappedCategory === categoriaSeleccionada)
         : data;
+=======
+    }, []); // PODRIA
+
+    // useEffect(funcion,array de dependicas)
+
+    // Filtrar productos según la categoría seleccionada
+    const filteredData = categoriaSeleccionada ? data.filter((item) => item.mappedCategory === categoriaSeleccionada) : data;
+>>>>>>> main
 
     return (
         <ScrollView style={styles.container}>
