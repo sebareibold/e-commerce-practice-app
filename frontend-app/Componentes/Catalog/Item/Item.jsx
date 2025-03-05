@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { API_BASE_URL } from '../../../';
-
 
 const { width, height } = Dimensions.get('window'); // Obtener las dimensiones de la pantalla
 
@@ -14,7 +12,6 @@ const Item = ({ item }) => {
       style={styles.item}
       onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })}
     >
-      {/*El drama esta aca en la ruta de la imagen :(*/}
       <Image
         source={item.imagen} 
         style={styles.image}
