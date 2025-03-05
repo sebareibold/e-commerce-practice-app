@@ -7,6 +7,9 @@ Este proyecto fue desarrollado utilizando las siguientes tecnologías:
 
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
+- [Express](https://expressjs.com/)
+- [Node](https://nodejs.org/es)
+
 
 ## 📸 Capturas de Pantalla
 
@@ -14,17 +17,21 @@ _capturas de pantalla de tu aplicación_
 
 ## 🛠️ Cómo instalar el proyecto
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
-
-### 1️⃣ Clonar el repositorio
+Sigue estos pasos para ejecutar el proyecto en tu entorno local, primero clonaremos el repositorio:
 ```sh
  git clone https://github.com/sebareibold/e-commerce-practice-app
  cd e-commerce-practice-app
 ```
 
-### 2️⃣ Instalar dependencias ( en el directorio frontend-app)
+## 💎 Como probar el Frontend
+
+### 1️⃣ Movernos en el directorio frontend-app
 ```sh
  cd .\frontend-app\
+```
+
+### 2️⃣ Instalar dependencias ( en el directorio frontend-app)
+```sh
  npm install
 ```
 
@@ -35,16 +42,50 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ### 4️⃣ Iniciar el proyecto
 ```sh
- expo start
+  npx expo start
+```
+### ⚠️ Pasos para probar el frontend con el servidor del backend
+
+1. **Obtener la dirección IP local:**
+   - En **Windows**, abre la terminal (`cmd`) y ejecuta el siguiente comando:
+     ```sh
+     ipconfig
+     ```
+   - En **Linux** o **macOS**, abre la terminal y ejecuta:
+     ```sh
+     ifconfig
+     ```
+   - Busca la línea que dice **"Dirección IPv4"**. Por ejemplo: `192.168.1.XX`
+
+2. **Modificar la configuración del frontend:**
+   - Dirígete al directorio del frontend.
+   - Dentro del frontend, busca el directorio `config`.
+   - Abre el archivo de configuración correspondiente.
+   - Reemplaza el valor de `M_IP_EN_RED` por la dirección IP obtenida en el paso 1.
+
+3. **Guardar los cambios y ejecutar el frontend**
+   - Guarda el archivo modificado.
+   - Inicia el frontend como lo harías normalmente.
+
+## 🪐 Como probar el BackEnd
+
+### 1️⃣ Movernos en el directorio backend-app
+```sh
+   cd .\backend-app\
 ```
 
-### 5️⃣ Probar en un dispositivo o emulador
-- **Para dispositivos físicos**: Escanea el código QR con la app de Expo Go.
-- **Para emuladores**:
-  - Android: Asegúrate de tener un emulador configurado en Android Studio.
-  - iOS: Usa `expo run:ios` si estás en macOS y tienes Xcode instalado.
+### 2️⃣ Instalar dependencias ( en el directorio frontend-app)
+```sh
+   npm install
+```
 
-## ☺️ Crea tu propia rama 
+### 3️⃣ Iniciar el proyecto
+```sh
+   npm start
+```
+
+
+## 🧑🏽‍💻 Crea tu propia rama 
 
 1. **Actualizar la rama principal:**
    ```sh

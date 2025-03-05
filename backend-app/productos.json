@@ -1,243 +1,242 @@
 [
-        {   
-            "id": 1,
-            "nombre": "Remera Básica",
-            "categoria": "Remeras",
-            "descripcion": "Remera de algodón 100% de corte clásico.",
-            "precio": 25,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.5,
-            "imagen": "/remera_basica.png"
-        },
-        {
-            "id": 2,
-            "nombre": "Remera Deportiva",
-            "categoria": "Remeras",
-            "descripcion": "Remera técnica para deportes, ligera y transpirable.",
-            "precio": 30,
-            "talles": ["M", "L", "XL"],
-            "calificacion": 4.7,
-            "imagen": "/remera_deportiva.png"
-        },
-        {
-            "id": 3,
-            "nombre": "Remera Estampada",
-            "categoria": "Remeras",
-            "descripcion": "Remera con estampado gráfico moderno.",
-            "precio": 35,
-            "talles": ["S", "M", "L", "XL"],
-            "calificacion": 4.3,
-            "imagen": "/remera_estampada.png"
-        },
-        {
-            "id": 4,
-            "nombre": "Remera Manga Larga",
-            "categoria": "Remeras",
-            "descripcion": "Remera de manga larga para climas frescos.",
-            "precio": 28,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.2,
-            "imagen": "/remera_manga_larga.png"
-        },
-        {
-            "id": 5,
-            "nombre": "Remera Ajustada",
-            "categoria": "Remeras",
-            "descripcion": "Remera ajustada al cuerpo, ideal para outfits casuales.",
-            "precio": 32,
-            "talles": ["M", "L"],
-            "calificacion": 4.6,
-            "imagen": "/remera_ajustada.png"
-        },
-        {
-            "id": 6,
-            "nombre": "Remera con Capucha",
-            "categoria": "Remeras",
-            "descripcion": "Remera con capucha, ideal para un look urbano.",
-            "precio": 38,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.4,
-            "imagen": "/remera_con_capucha.png"
-        },
-        {
-            "id": 7,
-            "nombre": "Buzo Clásico",
-            "categoria": "Buzos",
-            "descripcion": "Buzo de algodón con diseño clásico.",
-            "precio": 40,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.8,
-            "imagen": "/buzo_clasico.png"
-        },
-        {
-            "id": 8,
-            "nombre": "Buzo con Logo",
-            "categoria": "Buzos",
-            "descripcion": "Buzo con logo estampado en el pecho.",
-            "precio": 45,
-            "talles": ["M", "L", "XL"],
-            "calificacion": 4.6,
-            "imagen": "/buzo_con_logo.png"
-        },
-        {
-            "id": 9,
-            "nombre": "Buzo Deportivo",
-            "categoria": "Buzos",
-            "descripcion": "Buzo ideal para entrenamientos y actividades deportivas.",
-            "precio": 50,
-            "talles": ["M", "L", "XL"],
-            "calificacion": 4.7,
-            "imagen": "/buzo_deportivo.png"
-        },
-        {
-            "id": 10,
-            "nombre": "Buzo con Capucha",
-            "categoria": "Buzos",
-            "descripcion": "Buzo de felpa con capucha, cómodo y moderno.",
-            "precio": 55,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.3,
-            "imagen": "/buzo_con_capucha.png"
-        },
-        {
-            "id": 11,
-            "nombre": "Buzo Oversize",
-            "categoria": "Buzos",
-            "descripcion": "Buzo de corte oversize, ideal para looks relajados.",
-            "precio": 60,
-            "talles": ["M", "L"],
-            "calificacion": 4.5,
-            "imagen": "/buzo_oversize.png"
-        },
-        {
-            "id": 12,
-            "nombre": "Buzo con Cremallera",
-            "categoria": "Buzos",
-            "descripcion": "Buzo con cremallera y detalles en contraste.",
-            "precio": 48,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.2,
-            "imagen": "/buzo_con_cremallera.png"
-        },
-        {
-            "id": 13,
-            "nombre": "Zapatillas Deportivas",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas para entrenamiento con suela antideslizante.",
-            "precio": 70,
-            "talles": ["40", "41", "42", "43"],
-            "calificacion": 4.7,
-            "imagen": "/zapatillas_deportivas.png"
-        },
-        {
-            "id": 14,
-            "nombre": "Zapatillas Casual",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas de estilo casual, cómodas y ligeras.",
-            "precio": 75,
-            "talles": ["38", "39", "40", "41"],
-            "calificacion": 4.5,
-            "imagen": "/zapatillas_casual.png"
-        },
-        {
-            "id": 15,
-            "nombre": "Zapatillas Running",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas diseñadas para correr, con amortiguación avanzada.",
-            "precio": 80,
-            "talles": ["42", "43", "44"],
-            "calificacion": 4.8,
-            "imagen": "/zapatillas_running.png"
-        },
-        {
-            "id": 16,
-            "nombre": "Zapatillas de Trekking",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas resistentes para caminatas y excursiones.",
-            "precio": 85,
-            "talles": ["40", "41", "42"],
-            "calificacion": 4.6,
-            "imagen": "/zapatillas_trekking.png"
-        },
-        {
-            "id": 17,
-            "nombre": "Zapatillas con Luces",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas con luces LED en la suela.",
-            "precio": 90,
-            "talles": ["37", "38", "39"],
-            "calificacion": 4.3,
-            "imagen": "/zapatillas_con_luces.png"
-        },
-        {
-            "id": 18,
-            "nombre": "Zapatillas de Cuero",
-            "categoria": "Zapatillas",
-            "descripcion": "Zapatillas de cuero con diseño elegante.",
-            "precio": 100,
-            "talles": ["40", "41", "42"],
-            "calificacion": 4.9,
-            "imagen": "/zapatillas_cuero.png"
-        },
-        {
-            "id": 19,
-            "nombre": "Pantalón Jeans",
-            "categoria": "Pantalones",
-            "descripcion": "Jeans de corte regular, básicos para cualquier ocasión.",
-            "precio": 40,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.6,
-            "imagen": "/pantalon_jeans.png"
-        },
-        {
-            "id": 20,
-            "nombre": "Pantalón Deportivo",
-            "categoria": "Pantalones",
-            "descripcion": "Pantalón cómodo para actividades deportivas.",
-            "precio": 45,
-            "talles": ["M", "L", "XL"],
-            "calificacion": 4.7,
-            "imagen": "/pantalon_deportivo.png"
-        },
-        {
-            "id": 21,
-            "nombre": "Pantalón Cargo",
-            "categoria": "Pantalones",
-            "descripcion": "Pantalón cargo con varios bolsillos, ideal para el día a día.",
-            "precio": 50,
-            "talles": ["L", "XL"],
-            "calificacion": 4.5,
-            "imagen": "/pantalon_cargo.png"
-        },
-        {
-            "id": 22,
-            "nombre": "Pantalón Jogger",
-            "categoria": "Pantalones",
-            "descripcion": "Pantalón jogger con ajuste en los tobillos, perfecto para el confort.",
-            "precio": 55,
-            "talles": ["M", "L", "XL"],
-            "calificacion": 4.8,
-            "imagen": "/pantalon_jogger.png"
-        },
-        {
-            "id": 23,
-            "nombre": "Pantalón Formal",
-            "categoria": "Pantalones",
-            "descripcion": "Pantalón formal de corte slim, ideal para ocasiones elegantes.",
-            "precio": 60,
-            "talles": ["S", "M", "L"],
-            "calificacion": 4.7,
-            "imagen": "/pantalon_formal.png"
-        },
-        {
-            "id": 24,
-            "nombre": "Pantalón de Lana",
-            "categoria": "Pantalones",
-            "descripcion": "Pantalón de lana, ideal para climas fríos.",
-            "precio": 65,
-            "talles": ["M", "L"],
-            "calificacion": 4.6,
-            "imagen": "/pantalon_lana.png"
-        }
-    ]
-
+  {
+    "id": 1,
+    "nombre": "Remera Básica",
+    "categoria": "Remeras",
+    "descripcion": "Remera de algodón 100% de corte clásico.",
+    "precio": 25,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.5,
+    "imagen": "/reme1.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Remera Deportiva",
+    "categoria": "Remeras",
+    "descripcion": "Remera técnica para deportes, ligera y transpirable.",
+    "precio": 30,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.7,
+    "imagen": "/reme2.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Remera Estampada",
+    "categoria": "Remeras",
+    "descripcion": "Remera con estampado gráfico moderno.",
+    "precio": 35,
+    "talles": ["S", "M", "L", "XL"],
+    "calificacion": 4.3,
+    "imagen": "/reme3.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Remera Manga Larga",
+    "categoria": "Remeras",
+    "descripcion": "Remera de manga larga para climas frescos.",
+    "precio": 28,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.2,
+    "imagen": "/reme4.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Remera Ajustada",
+    "categoria": "Remeras",
+    "descripcion": "Remera ajustada al cuerpo, ideal para outfits casuales.",
+    "precio": 32,
+    "talles": ["M", "L"],
+    "calificacion": 4.6,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Remera con Capucha",
+    "categoria": "Remeras",
+    "descripcion": "Remera con capucha, ideal para un look urbano.",
+    "precio": 38,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.4,
+    "imagen": "/reme6.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Buzo Clásico",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de algodón con diseño clásico.",
+    "precio": 40,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.8,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Buzo con Logo",
+    "categoria": "Buzos",
+    "descripcion": "Buzo con logo estampado en el pecho.",
+    "precio": 45,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.6,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Buzo Deportivo",
+    "categoria": "Buzos",
+    "descripcion": "Buzo ideal para entrenamientos y actividades deportivas.",
+    "precio": 50,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.7,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Buzo con Capucha",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de felpa con capucha, cómodo y moderno.",
+    "precio": 55,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.3,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Buzo Oversize",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de corte oversize, ideal para looks relajados.",
+    "precio": 60,
+    "talles": ["M", "L"],
+    "calificacion": 4.5,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Buzo con Cremallera",
+    "categoria": "Buzos",
+    "descripcion": "Buzo con cremallera y detalles en contraste.",
+    "precio": 48,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.2,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Zapatillas Deportivas",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas para entrenamiento con suela antideslizante.",
+    "precio": 70,
+    "talles": ["40", "41", "42", "43"],
+    "calificacion": 4.7,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Zapatillas Casual",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas de estilo casual, cómodas y ligeras.",
+    "precio": 75,
+    "talles": ["38", "39", "40", "41"],
+    "calificacion": 4.5,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Zapatillas Running",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas diseñadas para correr, con amortiguación avanzada.",
+    "precio": 80,
+    "talles": ["42", "43", "44"],
+    "calificacion": 4.8,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Zapatillas de Trekking",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas resistentes para caminatas y excursiones.",
+    "precio": 85,
+    "talles": ["40", "41", "42"],
+    "calificacion": 4.6,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Zapatillas con Luces",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas con luces LED en la suela.",
+    "precio": 90,
+    "talles": ["37", "38", "39"],
+    "calificacion": 4.3,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 18,
+    "nombre": "Zapatillas de Cuero",
+    "categoria": "Zapatillas",
+    "descripcion": "Zapatillas de cuero con diseño elegante.",
+    "precio": 100,
+    "talles": ["40", "41", "42"],
+    "calificacion": 4.9,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 19,
+    "nombre": "Pantalón Jeans",
+    "categoria": "Pantalones",
+    "descripcion": "Jeans de corte regular, básicos para cualquier ocasión.",
+    "precio": 40,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.6,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 20,
+    "nombre": "Pantalón Deportivo",
+    "categoria": "Pantalones",
+    "descripcion": "Pantalón cómodo para actividades deportivas.",
+    "precio": 45,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.7,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 21,
+    "nombre": "Pantalón Cargo",
+    "categoria": "Pantalones",
+    "descripcion": "Pantalón cargo con varios bolsillos, ideal para el día a día.",
+    "precio": 50,
+    "talles": ["L", "XL"],
+    "calificacion": 4.5,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Pantalón Jogger",
+    "categoria": "Pantalones",
+    "descripcion": "Pantalón jogger con ajuste en los tobillos, perfecto para el confort.",
+    "precio": 55,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.8,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 23,
+    "nombre": "Pantalón Formal",
+    "categoria": "Pantalones",
+    "descripcion": "Pantalón formal de corte slim, ideal para ocasiones elegantes.",
+    "precio": 60,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.7,
+    "imagen": "/reme5.png"
+  },
+  {
+    "id": 24,
+    "nombre": "Pantalón de Lana",
+    "categoria": "Pantalones",
+    "descripcion": "Pantalón de lana, ideal para climas fríos.",
+    "precio": 65,
+    "talles": ["M", "L"],
+    "calificacion": 4.6,
+    "imagen": "/reme5.png"
+  }
+]

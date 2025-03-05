@@ -1,31 +1,32 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { API_BASE_URL } from '../../../';
+
+
 const { width, height } = Dimensions.get('window'); // Obtener las dimensiones de la pantalla
 
-
-const Item = ({ item }) => {  // item es una prop que contiene los datos del artículo
+const Item = ({ item }) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
       style={styles.item}
-      onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })} 
+      onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })}
     >
+      {/*El drama esta aca en la ruta de la imagen :(*/}
       <Image
- diseño-de-catalogo-y-detalles
-        source={{ uri: item.image }}
+        source={item.imagen} 
         style={styles.image}
       />
       <View style={styles.secondSideItem}>
-        <Text style={styles.text}>{item.title}</Text>  
+        <Text style={styles.text}>{item.nombre}</Text>
       </View>
       <View style={styles.otherSideItem}>
-        <Text style={styles.textPrice}>${item.price}</Text> 
-        <Text style={styles.textPrice}>{item.rating.rate}</Text> 
+        <Text style={styles.textPrice}>${item.precio}</Text>
+        <Text style={styles.textPrice}>{item.calificacion}</Text>
       </View>
     </TouchableOpacity>
-
   );
 };
 
@@ -54,7 +55,6 @@ const styles = StyleSheet.create({
     aspectRatio: 1, // Mantiene la proporción original
     resizeMode: 'contain', // Asegura que la imagen se ajuste sin distorsión
   },
-
   secondSideItem: {
     flex: 1, // Ocupar todo el espacio restante
     marginLeft: '10%',
