@@ -3,18 +3,8 @@ import { ScrollView, View, StyleSheet, ActivityIndicator } from 'react-native';
 import Item from '../Item/Item';
 import Presentation from '../Presentation/Presentation';
 import Category from '../Category/Category';
+import { API_BASE_URL } from '../../../Config/apiConfig';
 
-const TOTAL_ITEMS = 30;
-
-// Función de mapeo de categorías de la API a las personalizadas
-const categoryMap = {
-    "men's clothing": "Remeras",
-    "women's clothing": "Buzos",
-    "electronics": "Zapatillas",
-    "jewelery": "Pantalones"
-};
-
-const mapCategory = (apiCategory) => categoryMap[apiCategory] || "Otros";
 
 const ItemListContainer = () => {
     const [data, setData] = useState([]);
@@ -22,26 +12,33 @@ const ItemListContainer = () => {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        fetch(`${API_BASE_URL}/productos/`) 
             .then((response) => response.json())
             .then((json) => {
-                const mappedData = json.slice(0, TOTAL_ITEMS).map(item => ({
-                    ...item,
-                    mappedCategory: mapCategory(item.category) 
-                }));
-                setData(mappedData);
+                setData(json);
+
                 setLoading(false);
             })
             .catch((error) => {
-                console.error('Error fetching data:', error);
+                console.error('Error en el fetch:', error);
                 setLoading(false);
             });
+
+    }, []);
+    
+
+    // Filtrar productos 
+    const filteredData = categoriaSeleccionada
+        ? data.filter((item) => item.mappedCategory === categoriaSeleccionada)
+        : data;
+=======
     }, []); // PODRIA
 
     // useEffect(funcion,array de dependicas)
 
     // Filtrar productos según la categoría seleccionada
     const filteredData = categoriaSeleccionada ? data.filter((item) => item.mappedCategory === categoriaSeleccionada) : data;
+>>>>>>> main
 
     return (
         <ScrollView style={styles.container}>
