@@ -10,9 +10,9 @@
         {
             "id": 2,
             "nombre": "Remera diseño de Turing",
-            "descripcion": "Remera Manga Corta de Algodon",
+            "descripcion": "Remera Manga Corta de Algodon ",
             "precio": 80,
-            "imagen": "img/remera2.jpeg"
+            "imagen": "img/remera2.jpeg"  
         },
         {
             "id": 3,

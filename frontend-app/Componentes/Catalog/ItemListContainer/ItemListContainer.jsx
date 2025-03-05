@@ -22,14 +22,12 @@ const ItemListContainer = () => {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
     useEffect(() => {
-        //const apiUrl = process.env.EXPO_PUBLIC_API_URL;
-        //NO FUNCIONA LA VARIABLE DE ENTORNO
         fetch('https://fakestoreapi.com/products')
             .then((response) => response.json())
             .then((json) => {
                 const mappedData = json.slice(0, TOTAL_ITEMS).map(item => ({
                     ...item,
-                    mappedCategory: mapCategory(item.category) // Agregar categoría personalizada
+                    mappedCategory: mapCategory(item.category) 
                 }));
                 setData(mappedData);
                 setLoading(false);
@@ -38,12 +36,12 @@ const ItemListContainer = () => {
                 console.error('Error fetching data:', error);
                 setLoading(false);
             });
-    }, []);
+    }, []); // PODRIA
+
+    // useEffect(funcion,array de dependicas)
 
     // Filtrar productos según la categoría seleccionada
-    const filteredData = categoriaSeleccionada
-        ? data.filter((item) => item.mappedCategory === categoriaSeleccionada)
-        : data;
+    const filteredData = categoriaSeleccionada ? data.filter((item) => item.mappedCategory === categoriaSeleccionada) : data;
 
     return (
         <ScrollView style={styles.container}>
