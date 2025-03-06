@@ -1,19 +1,23 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { API_BASE_URL } from '../../../Config/apiConfig';
 
 const { width, height } = Dimensions.get('window'); // Obtener las dimensiones de la pantalla
 
 const Item = ({ item }) => {
   const navigation = useNavigation();
 
+  //Defino la url para obtener la imagen del producto
+  const imagenURL = `${API_BASE_URL}/${item.imagen}`;
+ 
   return (
     <TouchableOpacity
       style={styles.item}
       onPress={() => navigation.navigate('ItemDetail', { itemId: item.id })}
     >
       <Image
-        source={item.imagen} 
+        source={{uri: imagenURL}}
         style={styles.image}
       />
       <View style={styles.secondSideItem}>
