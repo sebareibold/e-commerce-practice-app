@@ -9,8 +9,9 @@ app.use(cors());
 // Middleware para analizar el cuerpo de las solicitudes
 app.use(express.json()); // Esto es necesario para recibir datos en formato JSON en el cuerpo de las peticiones
 
-// Servir imágenes desde la carpeta 'Public/images'
-app.use('/images', express.static(path.join(__dirname, 'Public', 'images')));
+// Servir imágenes desde la carpeta 'imagenes'
+app.use("/imagenes", express.static(path.join(__dirname, 'imagenes')));
+
 
 // Rutas
 const productosRouter = require('./Routers/productos-router');

@@ -39,8 +39,8 @@ router.get("/:idProducto", (req, res) => {
 
 
 // Endpoint GET: Obtener productos por categoria
-router.get("/categoria", (req, res) => {
-  let { categoria } = req.query;
+router.get("/:categoria", (req, res) => {
+  let { categoria } = req.params;
 
   // Validación para la categoría
   if (categoria && typeof categoria !== "string") {

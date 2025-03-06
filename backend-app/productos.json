@@ -7,7 +7,7 @@
     "precio": 25,
     "talles": ["S", "M", "L"],
     "calificacion": 4.5,
-    "imagen": "/reme1.png"
+    "imagen": "imagenes/reme1.png"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "precio": 30,
     "talles": ["M", "L", "XL"],
     "calificacion": 4.7,
-    "imagen": "/reme2.png"
+    "imagen": "imagenes/reme2.png"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "precio": 35,
     "talles": ["S", "M", "L", "XL"],
     "calificacion": 4.3,
-    "imagen": "/reme3.png"
+    "imagen": "imagenes/reme3.png"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "precio": 28,
     "talles": ["S", "M", "L"],
     "calificacion": 4.2,
-    "imagen": "/reme4.png"
+    "imagen": "imagenes/reme4.png"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "precio": 32,
     "talles": ["M", "L"],
     "calificacion": 4.6,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "precio": 38,
     "talles": ["S", "M", "L"],
     "calificacion": 4.4,
-    "imagen": "/reme6.png"
+    "imagen": "imagenes/reme6.png"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "precio": 40,
     "talles": ["S", "M", "L"],
     "calificacion": 4.8,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "precio": 45,
     "talles": ["M", "L", "XL"],
     "calificacion": 4.6,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "precio": 50,
     "talles": ["M", "L", "XL"],
     "calificacion": 4.7,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "precio": 55,
     "talles": ["S", "M", "L"],
     "calificacion": 4.3,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "precio": 60,
     "talles": ["M", "L"],
     "calificacion": 4.5,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "precio": 48,
     "talles": ["S", "M", "L"],
     "calificacion": 4.2,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "precio": 70,
     "talles": ["40", "41", "42", "43"],
     "calificacion": 4.7,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "precio": 75,
     "talles": ["38", "39", "40", "41"],
     "calificacion": 4.5,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
     "precio": 80,
     "talles": ["42", "43", "44"],
     "calificacion": 4.8,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "precio": 85,
     "talles": ["40", "41", "42"],
     "calificacion": 4.6,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
     "precio": 90,
     "talles": ["37", "38", "39"],
     "calificacion": 4.3,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
     "precio": 100,
     "talles": ["40", "41", "42"],
     "calificacion": 4.9,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
     "precio": 40,
     "talles": ["S", "M", "L"],
     "calificacion": 4.6,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "precio": 45,
     "talles": ["M", "L", "XL"],
     "calificacion": 4.7,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
     "precio": 50,
     "talles": ["L", "XL"],
     "calificacion": 4.5,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "precio": 55,
     "talles": ["M", "L", "XL"],
     "calificacion": 4.8,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
     "precio": 60,
     "talles": ["S", "M", "L"],
     "calificacion": 4.7,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   },
   {
     "id": 24,
@@ -237,6 +237,6 @@
     "precio": 65,
     "talles": ["M", "L"],
     "calificacion": 4.6,
-    "imagen": "/reme5.png"
+    "imagen": "imagenes/reme5.png"
   }
 ]

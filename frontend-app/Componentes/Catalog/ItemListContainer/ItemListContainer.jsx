@@ -15,8 +15,7 @@ const ItemListContainer = () => {
         fetch(`${API_BASE_URL}/productos/`) 
             .then((response) => response.json())
             .then((json) => {
-                setData(json);
-
+                setData(json);          
                 setLoading(false);
             })
             .catch((error) => {
