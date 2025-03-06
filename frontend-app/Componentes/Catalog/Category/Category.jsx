@@ -9,13 +9,11 @@ const Category = ({ setCategoriaSeleccionada }) => {
     const handleCategoryPress = (category) => {
         setCategoriaSeleccionada(category);
         setCategoria(category); // Actualiza el estado
-        Alert.alert("Categoría seleccionada", `Has seleccionado: ${category}`); 
     };
 
     const handleVerTodasPress = () => {
         setCategoriaSeleccionada(null);
         setCategoria(null)
-        Alert.alert("Sin categoria"); 
     }
 
     return (
