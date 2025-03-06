@@ -27,7 +27,7 @@ const ItemListContainer = () => {
     
 
     // Filtrar productos según la categoría seleccionada
-    const filteredData = categoriaSeleccionada ? data.filter((item) => item.mappedCategory === categoriaSeleccionada) : data;
+    const filteredData = categoriaSeleccionada ? data.filter((item) => item.categoria === categoriaSeleccionada) : data;
 
     return (
         <ScrollView style={styles.container}>
