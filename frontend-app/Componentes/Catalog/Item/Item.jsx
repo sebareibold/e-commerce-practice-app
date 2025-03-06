@@ -28,7 +28,7 @@ const Item = ({ item }) => {
         </TouchableOpacity>
       </View>
       <View style={styles.secondSideItem}>
-        <Text style={styles.text}>{item.nombre}</Text>
+        <Text style={styles.textItem}>{item.nombre}</Text>
       </View>
       <View style={styles.otherSideItem}>
         <Text style={styles.textPrice}>${item.precio}</Text>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     paddingHorizontal: 0,
     elevation: 1,
-    aspectRatio: 0.9, // Mantiene un tamaño cuadrado dinámico
+    aspectRatio: 0.8, // Mantiene un tamaño cuadrado dinámico
   },
   imageContainer: {
     position: 'relative',
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   heartIcon: {
     position: 'absolute',
     top: 10,
-    right: -15,
+    right: -5,
     backgroundColor: '#ffff',
     borderRadius: 20,
     padding: 5,
@@ -71,9 +71,7 @@ const styles = StyleSheet.create({
   image: {
     marginTop: '5%',
     marginLeft: '5%',
-    maxWidth: 120,  // Tamaño máximo permitido
-    maxHeight: 120, // Tamaño máximo permitido
-    width: '100%',  // Ajuste dinámico
+    width: '80%',  // Ajuste dinámico
     aspectRatio: 1, // Mantiene la proporción original
     resizeMode: 'contain', // Asegura que la imagen se ajuste sin distorsión
   },
@@ -94,10 +92,10 @@ const styles = StyleSheet.create({
     marginBottom: '10%', // Espaciado entre textos
     fontWeight: 'bold',
   },
-  text: {
+  textItem: {
     color: '#000',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 12,
     marginBottom: 8,
     alignSelf: 'flex-start',
     textAlign: 'left',
