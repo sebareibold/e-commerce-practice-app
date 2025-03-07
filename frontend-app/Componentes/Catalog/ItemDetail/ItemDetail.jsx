@@ -1,9 +1,16 @@
+
 import React from 'react';
 import { Text, View,  TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import hoodieImage from '../../../assets/images/hoodie (1).png';
 import styles from './ItemDetail.css';  
+import { useContext } from 'react';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Ionicons from "@expo/vector-icons/Ionicons";
+import hoodieImage from '../../../assets/images/hoodie (1).png';
+import { CarritoContext } from '../../../Context/CarritoContext';
 
 const SelectorDeTalles = () => {
     return (
@@ -20,11 +27,13 @@ const SelectorDeTalles = () => {
     );
 };
 
-const BotonesDeCompra = () => {
+const BotonesDeCompra = ( item, cantidad ) => {
+    const { agregarAlCarrito } = useContext(CarritoContext);
+
     return (
         <View style={styles.descReviewContainer}>
-            <TouchableOpacity style={[styles.optionButton, styles.active]}>
-                <Text style={styles.textCarritoCompra}>Añadir al Carrito</Text>
+            <TouchableOpacity style={[styles.optionButton, styles.active]} onPress={(item, cantidad) => agregarAlCarrito(item, cantidad)}>
+                <Text style={styles.text}>Añadir al Carrito</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.optionButton}>
                 <Text style={styles.textCarritoCompra}>Comprar Ahora</Text>
@@ -61,7 +70,7 @@ export default function ItemDetail({ route }) {
                 <Text style={styles.textPrice}>${item.precio}</Text>
             </View>
 
-            <BotonesDeCompra />
+            <BotonesDeCompra key={item.id} item={item} cantidad={1}/>
 
             <View style={styles.leftAlignedContainer}>
                 <Text style={styles.tituloDescrip}>Descripcion</Text>
