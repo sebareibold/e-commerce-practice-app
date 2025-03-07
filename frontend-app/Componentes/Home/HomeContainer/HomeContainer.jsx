@@ -46,7 +46,7 @@ const HomeContainer = () => {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        <Animated.Text style={[styles.brandTitle, { opacity: fadeAnimBrand }]}>
+        <Animated.Text style={[styles.brandTitle]}>
           King Of The South
         </Animated.Text>  
         <Animated.Text style={[styles.fashionTitle, { opacity: fadeAnimMen }]}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#cad7d9',
+    backgroundColor: '#fff',
   },
   brandTitle: {
     fontSize: 28,
@@ -94,13 +94,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#0f1626',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
     marginTop: 20,
-    textTransform: 'uppercase',
     letterSpacing: 1.5,
-    borderBottomWidth: 2,
-    borderBottomColor: '#ccc',
-    paddingBottom: 5,
   },
 });
 
