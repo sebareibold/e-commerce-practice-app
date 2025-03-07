@@ -19,9 +19,12 @@
     container: {
         padding: 20,
         backgroundColor: '#0f1626',
-        marginBottom: 100,
+        marginBottom: 110,
         marginTop: 20,
         alignItems: 'center',
+        padding: 20,
+        margin: 20,
+        borderRadius: 25,
     },
     title: {
         fontSize: 18,

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, StyleSheet, ActivityIndicator } from 'react-native';
+import { ScrollView, View, ActivityIndicator } from 'react-native';
+import { API_BASE_URL } from '../../../Config/apiConfig';
 import Item from '../Item/Item';
 import Presentation from '../Presentation/Presentation';
 import Category from '../Category/Category';
-import { API_BASE_URL } from '../../../Config/apiConfig';
-
+import styles from './ItemListContainer.css';  
 
 const ItemListContainer = () => {
+    
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
@@ -25,8 +26,6 @@ const ItemListContainer = () => {
 
     }, []);
     
-
-    // Filtrar productos según la categoría seleccionada
     const filteredData = categoriaSeleccionada ? data.filter((item) => item.categoria === categoriaSeleccionada) : data;
 
     return (
@@ -45,22 +44,5 @@ const ItemListContainer = () => {
         </ScrollView>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#ffffff',
-    },
-    listContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        padding: 16,
-        marginBottom: 60,
-    },
-    loader: {
-        marginTop: 20,
-    },
-});
 
 export default ItemListContainer;
