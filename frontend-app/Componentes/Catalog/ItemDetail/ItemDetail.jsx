@@ -6,10 +6,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import hoodieImage from '../../../assets/images/hoodie (1).png';
 import styles from './ItemDetail.css';  
 import { useContext } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import Ionicons from "@expo/vector-icons/Ionicons";
-import hoodieImage from '../../../assets/images/hoodie (1).png';
 import { CarritoContext } from '../../../Context/CarritoContext';
 
 const SelectorDeTalles = () => {
