@@ -16,7 +16,7 @@ const Category = ({ setCategoriaSeleccionada }) => {
     }
 
     return (
-        <View style={{ flexDirection: 'column' }}>
+        <View style={{ flexDirection: 'column' , marginBottom: 10}}>
             {/* Títulos */}
             <View style={styles.textContainer}>
                 <Text style={styles.categoria}>Categoría</Text>

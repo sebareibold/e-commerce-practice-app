@@ -238,5 +238,125 @@
     "talles": ["M", "L"],
     "calificacion": 4.6,
     "imagen": "imagenes/pant1.png"
+  },
+  {
+    "id": 25,
+    "nombre": "Remera Básica",
+    "categoria": "Remeras",
+    "descripcion": "Remera de algodón 100% de corte clásico.",
+    "precio": 25,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.5,
+    "imagen": "imagenes/reme1.png"
+  },
+  {
+    "id": 26,
+    "nombre": "Remera Deportiva",
+    "categoria": "Remeras",
+    "descripcion": "Remera técnica para deportes, ligera y transpirable.",
+    "precio": 30,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.7,
+    "imagen": "imagenes/reme2.png"
+  },
+  {
+    "id": 27,
+    "nombre": "Remera Estampada",
+    "categoria": "Remeras",
+    "descripcion": "Remera con estampado gráfico moderno.",
+    "precio": 35,
+    "talles": ["S", "M", "L", "XL"],
+    "calificacion": 4.3,
+    "imagen": "imagenes/reme3.png"
+  },
+  {
+    "id": 28,
+    "nombre": "Remera Manga Larga",
+    "categoria": "Remeras",
+    "descripcion": "Remera de manga larga para climas frescos.",
+    "precio": 28,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.2,
+    "imagen": "imagenes/reme4.png"
+  },
+  {
+    "id": 29,
+    "nombre": "Remera Ajustada",
+    "categoria": "Remeras",
+    "descripcion": "Remera ajustada al cuerpo, ideal para outfits casuales.",
+    "precio": 32,
+    "talles": ["M", "L"],
+    "calificacion": 4.6,
+    "imagen": "imagenes/reme5.png"
+  },
+  {
+    "id": 30,
+    "nombre": "Remera con Capucha",
+    "categoria": "Remeras",
+    "descripcion": "Remera con capucha, ideal para un look urbano.",
+    "precio": 38,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.4,
+    "imagen": "imagenes/reme6.png"
+  },
+  {
+    "id": 31,
+    "nombre": "Buzo Clásico",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de algodón con diseño clásico.",
+    "precio": 40,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.8,
+    "imagen": "imagenes/buzo1.png"
+  },
+  {
+    "id": 32,
+    "nombre": "Buzo con Logo",
+    "categoria": "Buzos",
+    "descripcion": "Buzo con logo estampado en el pecho.",
+    "precio": 45,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.6,
+    "imagen": "imagenes/buzo5.png"
+  },
+  {
+    "id": 33,
+    "nombre": "Buzo Deportivo",
+    "categoria": "Buzos",
+    "descripcion": "Buzo ideal para entrenamientos y actividades deportivas.",
+    "precio": 50,
+    "talles": ["M", "L", "XL"],
+    "calificacion": 4.7,
+    "imagen": "imagenes/buzo4.png"
+  },
+  {
+    "id": 34,
+    "nombre": "Buzo con Capucha",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de felpa con capucha, cómodo y moderno.",
+    "precio": 55,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.3,
+    "imagen": "imagenes/buzo3.png"
+  },
+  {
+    "id": 35,
+    "nombre": "Buzo Oversize",
+    "categoria": "Buzos",
+    "descripcion": "Buzo de corte oversize, ideal para looks relajados.",
+    "precio": 60,
+    "talles": ["M", "L"],
+    "calificacion": 4.5,
+    "imagen": "imagenes/buzo2.png"
+  },
+  {
+    "id": 36,
+    "nombre": "Buzo con Cremallera",
+    "categoria": "Buzos",
+    "descripcion": "Buzo con cremallera y detalles en contraste.",
+    "precio": 48,
+    "talles": ["S", "M", "L"],
+    "calificacion": 4.2,
+    "imagen": "imagenes/buzo1.png"
   }
 ]
