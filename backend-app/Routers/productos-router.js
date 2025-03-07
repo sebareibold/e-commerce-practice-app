@@ -9,10 +9,24 @@ const {
   modificarProducto,
 } = require("../Modelos/productos-modelo.js");
 
-// Endpoint GET: Obtener todos los productos
+// Endpoint GET: Obtener todos los productos con paginación
 router.get("", (req, res) => {
   const jsonRetorno = obtenerJSON();
-  res.send(jsonRetorno);
+
+  //Verificamos los parametros por las dudas:
+  const pagina = parseInt(req.query.pagina) > 0 ? parseInt(req.query.pagina) : 1;
+  const limite = parseInt(req.query.limite) > 0 ? parseInt(req.query.limite) : 6;
+
+  // Calculamos el índice de inicio y final para la paginacion (Para pasarse bien en el arreglo)
+  const startIndex = (pagina - 1) * limite; 
+  const endIndex = pagina * limite;
+
+  // Obtenemoss los productos paginados, slice; extrae un un arreglo q es un subconjunto.
+  const paginatedProducts = jsonRetorno.slice(startIndex, endIndex);
+
+  res.json({
+    productos: paginatedProducts
+  });
 });
 
 // Endpoint GET: Obtener producto por id

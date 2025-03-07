@@ -9,13 +9,17 @@ const styles = StyleSheet.create({
     listContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        padding: 16,
         marginBottom: 60,
+        justifyContent: 'center',
+        width: "100%",
     },
     loader: {
         marginTop: 20,
     },
+    columnWrapper:{
+        justifyContent: 'space-around',
+        padding: 5,
+    }
 });
 
 export default styles;
