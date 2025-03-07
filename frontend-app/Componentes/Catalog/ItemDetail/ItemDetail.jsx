@@ -7,6 +7,7 @@ import hoodieImage from '../../../assets/images/hoodie (1).png';
 import styles from './ItemDetail.css';  
 import { useContext } from 'react';
 import { CarritoContext } from '../../../Context/CarritoContext';
+import { API_BASE_URL } from '../../../Config/apiConfig';
 
 const SelectorDeTalles = () => {
     return (
@@ -42,6 +43,7 @@ const BotonesDeCompra = ( item, cantidad ) => {
 export default function ItemDetail({ route }) {
     
     const { item } = route.params;
+    const imgURL = `${API_BASE_URL}/${item.imagen}`;
 
     const navigation = useNavigation();
 
@@ -56,7 +58,7 @@ export default function ItemDetail({ route }) {
             </TouchableOpacity>
 
             <View style={styles.imgContainer}>
-                <Image source={hoodieImage} style={styles.image} />
+                <Image source={{ uri: imgURL }} style={styles.image} />
             </View>
 
             <SelectorDeTalles />
