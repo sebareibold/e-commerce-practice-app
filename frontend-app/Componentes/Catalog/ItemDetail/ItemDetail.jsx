@@ -24,12 +24,16 @@ const SelectorDeTalles = () => {
     );
 };
 
-const BotonesDeCompra = ( item, cantidad ) => {
-    const { agregarAlCarrito } = useContext(CarritoContext);
+const BotonesDeCompra = ({ item, cantidad }) => {
+    const { agregarAlCarrito, listaCarrito } = useContext(CarritoContext);
+    const sumarAlCarrito = () => {
+        //console.log("Agrego: ", item, "Cantidad: ",cantidad);
+        agregarAlCarrito(item, cantidad);
+    }
 
     return (
         <View style={styles.descReviewContainer}>
-            <TouchableOpacity style={[styles.optionButton, styles.active]} onPress={(item, cantidad) => agregarAlCarrito(item, cantidad)}>
+            <TouchableOpacity style={[styles.optionButton, styles.active]} onPress={sumarAlCarrito}>
                 <Text style={styles.text}>Añadir al Carrito</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.optionButton}>
@@ -41,8 +45,8 @@ const BotonesDeCompra = ( item, cantidad ) => {
 
 
 export default function ItemDetail({ route }) {
-    
-    const { item } = route.params;
+    const item  = route.params.item;
+    //console.log(item);
     const imgURL = `${API_BASE_URL}/${item.imagen}`;
 
     const navigation = useNavigation();
@@ -68,7 +72,7 @@ export default function ItemDetail({ route }) {
                 <Text style={styles.textPrice}>${item.precio}</Text>
             </View>
 
-            <BotonesDeCompra key={item.id} item={item} cantidad={1}/>
+            <BotonesDeCompra item={item} cantidad={6}/>
 
             <View style={styles.leftAlignedContainer}>
                 <Text style={styles.tituloDescrip}>Descripcion</Text>
