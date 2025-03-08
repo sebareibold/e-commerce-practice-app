@@ -1,12 +1,17 @@
 import CarritoItem from '../CarritoItem/CarritoItem'
 import { ScrollView, View, StyleSheet, ActivityIndicator, Text, TouchableOpacity } from 'react-native';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { CarritoContext } from '../../../Context/CarritoContext';
 import { useNavigation } from '@react-navigation/native';
 
 const CarritoList = () => {
     const { listaCarrito, precioTotal,  vaciarCarrito } = useContext(CarritoContext);
     const navigation = useNavigation();
+
+    useEffect(() => {
+            console.log("listaCarrito en CarritoList Actualizada: ",listaCarrito);
+        }, [listaCarrito]);
+    
 
     return(
         <View>
@@ -28,6 +33,9 @@ const CarritoList = () => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('FormularioFinal')} >
                 <Text>Continuar compra</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log(listaCarrito)} >
+                <Text>Mostrar Carrito</Text>
             </TouchableOpacity>
         </View>
     );

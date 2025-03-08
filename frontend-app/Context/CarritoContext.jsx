@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 export const CarritoContext = createContext({
     listaCarrito: [],
@@ -9,24 +9,31 @@ export const CarritoProvider = ({ children }) => {
     const [listaCarrito, setListaCarrito] = useState([]);
     const [precioTotal, setPrecioTotal] = useState(0);
 
+    useEffect(() => {
+        console.log("listaCarrito en CarritoProvider Actualizada: ",listaCarrito);
+    }, [listaCarrito]);
+
     const agregarAlCarrito = (item, cantidad) => {
 
         //Verifico si el producto ya esta en el carrito
         const productoEnCarrito = listaCarrito.find(producto => producto.item.id === item.id);
 
-        if(!productoEnCarrito){
+
+        if (!productoEnCarrito) {
             //Si el producto no está en el carrito lo agrego
-            setListaCarrito(carritoAnterior => [...carritoAnterior, {item, cantidad}]);
-            
+            setListaCarrito(carritoAnterior => [...carritoAnterior, { item, cantidad }]);
+
+            //const listaNueva = listaCarrito.push({item, cantidad});
+            //setListaCarrito(listaNueva);
+
             //Sumo el precio total
             setPrecioTotal(precioAnterior => precioAnterior + (item.precio * cantidad));
 
         } else {
             //Si el item ya está en el carrito lo busco
-
             setListaCarrito(carritoAnterior =>
-                carritoAnterior.map(producto => 
-                    producto.item.id === item.id ? {...producto, cantidad: producto.cantidad + cantidad } : producto
+                carritoAnterior.map(producto =>
+                    producto.item.id === item.id ? { ...producto, cantidad: producto.cantidad + cantidad } : producto
                 )
             )
 
@@ -39,7 +46,7 @@ export const CarritoProvider = ({ children }) => {
         //Busco el producto a eliminar
         const productoAEliminar = listaCarrito.find(producto => producto.item.id === id);
 
-        if(productoAEliminar){
+        if (productoAEliminar) {
             //Realizamos esto unicamente si el producto existe en el carrito
             const nuevoCarrito = listaCarrito.filter(producto => producto.item.id !== id);
 
@@ -55,9 +62,10 @@ export const CarritoProvider = ({ children }) => {
         setPrecioTotal(0);
     }
 
+
     return (
-        <CarritoContext.Provider value = {{ listaCarrito, precioTotal, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}>
-            { children }
+        <CarritoContext.Provider value={{ listaCarrito, precioTotal, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}>
+            {children}
         </CarritoContext.Provider>
     )
 }
