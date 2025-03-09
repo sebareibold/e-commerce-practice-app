@@ -125,8 +125,22 @@ const styles = StyleSheet.create({
     textCarritoCompra: {
         alignSelf: "center",
         fontWeight: "bold",
-      },
-      
+    },
+
+
+    cantButtonsContainer: {
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+        alignItems: "center",
+        marginRight: '12%'
+    },
+    cantButton: {
+        padding: 10,
+        backgroundColor: '#f0f0f0',
+        borderRadius: 5,
+        marginHorizontal: 5
+    }
 });
 
 export default styles;
