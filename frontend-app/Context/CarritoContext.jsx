@@ -9,12 +9,7 @@ export const CarritoProvider = ({ children }) => {
     const [listaCarrito, setListaCarrito] = useState([]);
     const [precioTotal, setPrecioTotal] = useState(0);
 
-    useEffect(() => {
-        console.log("listaCarrito en CarritoProvider Actualizada: ",listaCarrito);
-    }, [listaCarrito]);
-
     const agregarAlCarrito = (item, cantidad) => {
-
         //Verifico si el producto ya esta en el carrito
         const productoEnCarrito = listaCarrito.find(producto => producto.item.id === item.id);
 

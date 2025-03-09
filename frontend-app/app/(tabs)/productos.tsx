@@ -7,11 +7,9 @@ const Stack = createStackNavigator();
 
 export default function VistaProductos() {
     return (
-        <CarritoProvider>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="ListaProductos" component={ItemListContainer} />
                 <Stack.Screen name="ItemDetail" component={ItemDetail} />
             </Stack.Navigator>
-        </CarritoProvider>
     );
 }
