@@ -25,9 +25,8 @@ const SelectorDeTalles = () => {
 };
 
 const BotonesDeCompra = ({ item, cantidad }) => {
-    const { agregarAlCarrito, listaCarrito } = useContext(CarritoContext);
+    const { listaCarrito, agregarAlCarrito } = useContext(CarritoContext);
     const sumarAlCarrito = () => {
-        //console.log("Agrego: ", item, "Cantidad: ",cantidad);
         agregarAlCarrito(item, cantidad);
     }
 
@@ -72,7 +71,7 @@ export default function ItemDetail({ route }) {
                 <Text style={styles.textPrice}>${item.precio}</Text>
             </View>
 
-            <BotonesDeCompra item={item} cantidad={6}/>
+            <BotonesDeCompra item={item} cantidad={1}/>
 
             <View style={styles.leftAlignedContainer}>
                 <Text style={styles.tituloDescrip}>Descripcion</Text>
