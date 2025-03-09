@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { Text, View,  TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import hoodieImage from '../../../assets/images/hoodie (1).png';
-import styles from './ItemDetail.css';  
-import { useContext } from 'react';
+import styles from './ItemDetail.css';
+import { useContext, useState } from 'react';
 import { CarritoContext } from '../../../Context/CarritoContext';
 import { API_BASE_URL } from '../../../Config/apiConfig';
 
@@ -24,10 +24,13 @@ const SelectorDeTalles = () => {
     );
 };
 
-const BotonesDeCompra = ({ item, cantidad }) => {
-    const { listaCarrito, agregarAlCarrito } = useContext(CarritoContext);
+const BotonesDeCompra = ({ item, }) => {
+    const { agregarAlCarrito } = useContext(CarritoContext);
+    const [cantidad, setCantidad] = useState(1);
+
     const sumarAlCarrito = () => {
         agregarAlCarrito(item, cantidad);
+        setCantidad(1);
     }
 
     return (
@@ -35,16 +38,24 @@ const BotonesDeCompra = ({ item, cantidad }) => {
             <TouchableOpacity style={[styles.optionButton, styles.active]} onPress={sumarAlCarrito}>
                 <Text style={styles.text}>Añadir al Carrito</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.optionButton}>
-                <Text style={styles.textCarritoCompra}>Comprar Ahora</Text>
-            </TouchableOpacity>
+            <View style={styles.cantButtonsContainer}>
+                {cantidad > 1 && (
+                    <TouchableOpacity style={styles.cantButton} onPress={() => setCantidad(cantidad - 1)}>
+                        <Text style={styles.textCarritoCompra}>-</Text>
+                    </TouchableOpacity>
+                )}
+                <Text>{cantidad}</Text>
+                <TouchableOpacity style={styles.cantButton} onPress={() => setCantidad(cantidad + 1)}>
+                    <Text style={styles.textCarritoCompra}>+</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };
 
 
 export default function ItemDetail({ route }) {
-    const item  = route.params.item;
+    const item = route.params.item;
     //console.log(item);
     const imgURL = `${API_BASE_URL}/${item.imagen}`;
 
@@ -71,7 +82,7 @@ export default function ItemDetail({ route }) {
                 <Text style={styles.textPrice}>${item.precio}</Text>
             </View>
 
-            <BotonesDeCompra item={item} cantidad={1}/>
+            <BotonesDeCompra item={item} />
 
             <View style={styles.leftAlignedContainer}>
                 <Text style={styles.tituloDescrip}>Descripcion</Text>
