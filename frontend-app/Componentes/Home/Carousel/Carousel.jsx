@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ScrollView, Image, StyleSheet, View, Dimensions } from 'react-native';
-
+import styles from './styles';
 const { width } = Dimensions.get('window');
 
 const Carousel = ({ images }) => {
@@ -35,25 +35,7 @@ const Carousel = ({ images }) => {
   );
 }
 
-const styles = StyleSheet.create({
-  carouselContainer: {
-    flexDirection: 'row',
-    margin: 25,
-    borderRadius: 25,
-    borderColor: '#1c1c1c',
-    elevation: 5,
 
-  },
-  imageContainer: {
-    width, // Full width of the device
-    height: 300, // Adjust height as needed
-  },
-  image: {
-    width: '100%', // Full width of the container
-    height: '100%', // Full height of the container
-    resizeMode: 'cover', // Cover the entire width
-  },
-});
 
 export default Carousel;
 
