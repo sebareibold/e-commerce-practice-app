@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import styles from './styles'
 import { CarritoContext } from '../../../Context/CarritoContext';
+import { API_BASE_URL } from '../../../Config/apiConfig';
 
 const FormularioFinal = () => {
-  const { listaCarrito } = useContext(CarritoContext);
+  const { listaCarrito, vaciarCarrito } = useContext(CarritoContext);
 
   const [datosFormulario, setDatosFormulario] = useState({
     nombre: '',
@@ -19,18 +20,56 @@ const FormularioFinal = () => {
     cvv: '',
     listaCarrito: listaCarrito
   });
-  
+
   const handleCheckout = () => {
     if (datosFormulario.nombre && datosFormulario.direccion && datosFormulario.ciudad && datosFormulario.codigoPostal && datosFormulario.pais && datosFormulario.correo && datosFormulario.telefono && datosFormulario.numeroTarjeta && datosFormulario.fechaExpiracion && datosFormulario.cvv) {
-      console.log(datosFormulario);
       //  enviar los datos al backend o procesar el pago
+      postData();
     } else {
       Alert.alert('Por favor, completa todos los campos.');
     }
   };
 
-  const postData = () => {
-    
+  const postData = async () => {
+    const url = `${API_BASE_URL}/compras`;
+    try {
+      await fetch(url, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(datosFormulario)
+      })
+        .then(response => {
+
+          if (response.ok) {
+
+            Alert.alert('La compra ha sido finalizada con éxito');
+
+            vaciarCarrito();
+
+            setDatosFormulario({
+              nombre: '',
+              direccion: '',
+              ciudad: '',
+              codigoPostal: '',
+              pais: '',
+              correo: '',
+              telefono: '',
+              numeroTarjeta: '',
+              fechaExpiracion: '',
+              cvv: '',
+              listaCarrito: listaCarrito
+            })
+
+          } else {
+            Alert.alert('Ha ocurrido un error en la compra.')
+          }
+        })
+
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 
