@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+
 // Habilitar CORS
 app.use(cors());
 
@@ -15,6 +16,9 @@ app.use("/imagenes", express.static(path.join(__dirname, 'imagenes')));
 
 // Rutas
 const productosRouter = require('./Routers/productos-router');
+const comprasRouter = require('./Routers/compras-router');
+
+app.use("/compras", comprasRouter);
 app.use("/productos", productosRouter);
 
 // Ruta de prueba (opcional)
