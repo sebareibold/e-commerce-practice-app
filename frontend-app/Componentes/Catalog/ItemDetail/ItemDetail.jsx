@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from "@expo/vector-icons/Ionicons";
-import hoodieImage from '../../../assets/images/hoodie (1).png';
+import { ScrollView } from 'react-native';
 import styles from './ItemDetail.css';
 import { useContext, useState } from 'react';
 import { CarritoContext } from '../../../Context/CarritoContext';
@@ -34,19 +34,21 @@ const BotonesDeCompra = ({ item, }) => {
     }
 
     return (
-        <View style={styles.descReviewContainer}>
-            <TouchableOpacity style={[styles.optionButton, styles.active]} onPress={sumarAlCarrito}>
-                <Text style={styles.text}>Añadir al Carrito</Text>
-            </TouchableOpacity>
-            <View style={styles.cantButtonsContainer}>
-                {cantidad > 1 && (
-                    <TouchableOpacity style={styles.cantButton} onPress={() => setCantidad(cantidad - 1)}>
-                        <Text style={styles.textCarritoCompra}>-</Text>
-                    </TouchableOpacity>
-                )}
-                <Text>{cantidad}</Text>
-                <TouchableOpacity style={styles.cantButton} onPress={() => setCantidad(cantidad + 1)}>
-                    <Text style={styles.textCarritoCompra}>+</Text>
+        <View style={styles.GestionDeCantContainer}>
+            <View style={[styles.otherSideItem, { width: "96%" }]}>
+                <Text style={styles.textCantidad}>Cantidad</Text>
+                <Text style={styles.textCantidad}>{cantidad}</Text>
+            </View>
+            <View style={styles.descReviewContainer}>
+                <TouchableOpacity style={styles.botonSubtract} onPress={() => cantidad>1? setCantidad(cantidad - 1):null}>
+                    <Ionicons name="bag-remove-outline" size={40} />
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.botonAdd} onPress={() => setCantidad(cantidad + 1)}>
+                    <Ionicons name="bag-add-outline" size={40} />
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.botonDeConfirmacion]} onPress={sumarAlCarrito}>
+                    <Ionicons name="bag-check-outline" size={40} />
                 </TouchableOpacity>
             </View>
         </View>
@@ -62,33 +64,35 @@ export default function ItemDetail({ route }) {
     const navigation = useNavigation();
 
     return (
-        <View style={styles.container}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+            <View style={styles.container}>
 
-            <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 12 }}>
-                    <Ionicons name="chevron-back" size={20} />
-                    <Text style={styles.backText}>Back</Text>
+                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+                    <View style={styles.backButtonContainer}>
+                        <Ionicons name="chevron-back" size={20} />
+                        <Text style={styles.backText}>Back</Text>
+                    </View>
+                </TouchableOpacity>
+
+                <View style={styles.imgContainer}>
+                    <Image source={{ uri: imgURL }} style={styles.image} />
                 </View>
-            </TouchableOpacity>
 
-            <View style={styles.imgContainer}>
-                <Image source={{ uri: imgURL }} style={styles.image} />
+                <SelectorDeTalles />
+
+                <View style={styles.otherSideItem}>
+                    <Text style={styles.textPrice}>{item.nombre}</Text>
+                    <Text style={styles.textPrice}>${item.precio}</Text>
+                </View>
+
+                <BotonesDeCompra item={item} />
+
+                <View style={styles.descripcionContenedor}>
+                    <Text style={styles.tituloDescrip}>Descripción</Text>
+                    <Text style={styles.textDescripcion}>{item.descripcion}</Text>
+                </View>
+
             </View>
-
-            <SelectorDeTalles />
-
-            <View style={styles.otherSideItem}>
-                <Text style={styles.textPrice}>{item.nombre}</Text>
-                <Text style={styles.textPrice}>${item.precio}</Text>
-            </View>
-
-            <BotonesDeCompra item={item} />
-
-            <View style={styles.leftAlignedContainer}>
-                <Text style={styles.tituloDescrip}>Descripcion</Text>
-                <Text style={styles.textDescripcion}>{item.descripcion}</Text>
-            </View>
-
-        </View>
+        </ScrollView>
     );
 }
