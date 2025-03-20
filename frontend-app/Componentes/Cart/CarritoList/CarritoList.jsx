@@ -1,5 +1,5 @@
 import CarritoItem from '../CarritoItem/CarritoItem'
-import { ScrollView, View, ActivityIndicator, Text, TouchableOpacity } from 'react-native';
+import { FlatList, View, ActivityIndicator, Text, TouchableOpacity } from 'react-native';
 import { useContext, useEffect } from 'react';
 import { CarritoContext } from '../../../Context/CarritoContext';
 import { useNavigation } from '@react-navigation/native';
@@ -20,17 +20,15 @@ const CarritoList = () => {
                     <Text>Continuar compra</Text>
                 </TouchableOpacity>
             </View>
-            <ScrollView style={styles.cartlist}>
-                {listaCarrito.length === 0 ? (
-                    <Text style={styles.emptyCart}>El carrito está vacío</Text>
-                ) : (
-                    <View>
-                        {listaCarrito.map(({ item, cantidad }) => (
-                            <CarritoItem key={item.id} item={item} cantidad={cantidad} />
-                        ))}
-                    </View>
+            <FlatList
+                style={styles.cartlist}
+                data={listaCarrito}
+                ListEmptyComponent={<Text style={styles.emptyCart}>El carrito está vacío</Text>}
+                renderItem={({ item }) => (
+                    <CarritoItem key={item.item.id} item={item.item} cantidad={item.cantidad} />
                 )}
-            </ScrollView>
+                keyExtractor={(item) => item.item.id.toString()}
+            />
         </View>
     );
 }

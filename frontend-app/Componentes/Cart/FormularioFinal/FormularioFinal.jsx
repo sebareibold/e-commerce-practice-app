@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-import styles from './styles'
+import { ScrollView, Text, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView, Platform } from 'react-native';
+import styles from './FormularioFinal.css'
 import { CarritoContext } from '../../../Context/CarritoContext';
 import { API_BASE_URL } from '../../../Config/apiConfig';
 
@@ -81,78 +81,80 @@ const FormularioFinal = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Finalizar Compra</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Nombre Completo"
-        value={datosFormulario.nombre}
-        onChangeText={(text) => handleChange('nombre', text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Dirección"
-        value={datosFormulario.direccion}
-        onChangeText={(text) => handleChange('direccion', text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Ciudad"
-        value={datosFormulario.ciudad}
-        onChangeText={(text) => handleChange('ciudad', text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Código Postal"
-        value={datosFormulario.codigoPostal}
-        onChangeText={(text) => handleChange('codigoPostal', text)}
-        keyboardType="numeric"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="País"
-        value={datosFormulario.pais}
-        onChangeText={(text) => handleChange('pais', text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Correo Electrónico"
-        value={datosFormulario.correo}
-        onChangeText={(text) => handleChange('correo', text)}
-        keyboardType="email-address"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Teléfono"
-        value={datosFormulario.telefono}
-        onChangeText={(text) => handleChange('telefono', text)}
-        keyboardType="phone-pad"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Número de Tarjeta"
-        value={datosFormulario.numeroTarjeta}
-        onChangeText={(text) => handleChange('numeroTarjeta', text)}
-        keyboardType="numeric"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Fecha de Expiración (MM/AA)"
-        value={datosFormulario.fechaExpiracion}
-        onChangeText={(text) => handleChange('fechaExpiracion', text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="CVV"
-        value={datosFormulario.cvv}
-        onChangeText={(text) => handleChange('cvv', text)}
-        keyboardType="numeric"
-        secureTextEntry
-      />
-      <TouchableOpacity style={styles.button} onPress={handleCheckout}>
-        <Text style={styles.buttonText}>Realizar Pedido</Text>
-      </TouchableOpacity>
-    </View>
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollcontainer}>
+        <Text style={styles.title}>Finalizar Compra</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Nombre Completo"
+          value={datosFormulario.nombre}
+          onChangeText={(text) => handleChange('nombre', text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Dirección"
+          value={datosFormulario.direccion}
+          onChangeText={(text) => handleChange('direccion', text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Ciudad"
+          value={datosFormulario.ciudad}
+          onChangeText={(text) => handleChange('ciudad', text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Código Postal"
+          value={datosFormulario.codigoPostal}
+          onChangeText={(text) => handleChange('codigoPostal', text)}
+          keyboardType="numeric"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="País"
+          value={datosFormulario.pais}
+          onChangeText={(text) => handleChange('pais', text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Correo Electrónico"
+          value={datosFormulario.correo}
+          onChangeText={(text) => handleChange('correo', text)}
+          keyboardType="email-address"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Teléfono"
+          value={datosFormulario.telefono}
+          onChangeText={(text) => handleChange('telefono', text)}
+          keyboardType="phone-pad"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Número de Tarjeta"
+          value={datosFormulario.numeroTarjeta}
+          onChangeText={(text) => handleChange('numeroTarjeta', text)}
+          keyboardType="numeric"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Fecha de Expiración (MM/AA)"
+          value={datosFormulario.fechaExpiracion}
+          onChangeText={(text) => handleChange('fechaExpiracion', text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="CVV"
+          value={datosFormulario.cvv}
+          onChangeText={(text) => handleChange('cvv', text)}
+          keyboardType="numeric"
+          secureTextEntry
+        />
+        <TouchableOpacity style={styles.button} onPress={handleCheckout}>
+          <Text style={styles.buttonText}>Realizar Pedido</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 

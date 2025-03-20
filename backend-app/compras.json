@@ -1,1 +1,151 @@
-[]
+[
+    {
+        "nombre": "Nicanor Fernandez",
+        "direccion": "Av. Argentina 123",
+        "ciudad": "Allen",
+        "codigoPostal": 2558,
+        "pais": "Argentina",
+        "correo": "nica@gmail.com",
+        "telefono": 2994165087,
+        "numeroTarjeta": 2651365428071457,
+        "fechaExpiracion": "10/50",
+        "cvv": 580,
+        "listaCarrito": [
+            {
+                "item": {
+                    "id": 2,
+                    "nombre": "Remera Deportiva",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera técnica para deportes, ligera y transpirable.",
+                    "precio": 30,
+                    "talles": [
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "calificacion": 4.7,
+                    "imagen": "imagenes/reme2.png"
+                },
+                "cantidad": 1
+            },
+            {
+                "item": {
+                    "id": 3,
+                    "nombre": "Remera Estampada",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera con estampado gráfico moderno.",
+                    "precio": 35,
+                    "talles": [
+                        "S",
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "calificacion": 4.3,
+                    "imagen": "imagenes/reme3.png"
+                },
+                "cantidad": 1
+            }
+        ],
+        "id": "m8hi3x17"
+    },
+    {
+        "nombre": "Sebastián Reibold",
+        "direccion": "Corrientes 234",
+        "ciudad": "Neuquen",
+        "codigoPostal": 5847,
+        "pais": "Argentina",
+        "correo": "seba@gmail.com",
+        "telefono": 2994153680,
+        "numeroTarjeta": 2651807732659804,
+        "fechaExpiracion": "12/40",
+        "cvv": 584,
+        "listaCarrito": [
+            {
+                "item": {
+                    "id": 2,
+                    "nombre": "Remera Deportiva",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera técnica para deportes, ligera y transpirable.",
+                    "precio": 30,
+                    "talles": [
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "calificacion": 4.7,
+                    "imagen": "imagenes/reme2.png"
+                },
+                "cantidad": 1
+            },
+            {
+                "item": {
+                    "id": 3,
+                    "nombre": "Remera Estampada",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera con estampado gráfico moderno.",
+                    "precio": 35,
+                    "talles": [
+                        "S",
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "calificacion": 4.3,
+                    "imagen": "imagenes/reme3.png"
+                },
+                "cantidad": 1
+            }
+        ],
+        "id": "m8hi5q48"
+    },    
+    {
+        "nombre": "Bautista Fernandez",
+        "direccion": "Brentana 456",
+        "ciudad": "Neuquen",
+        "codigoPostal": 5847,
+        "pais": "Argentina",
+        "correo": "bauti@gmail.com",
+        "telefono": 2995361425,
+        "numeroTarjeta": 25803014702580,
+        "fechaExpiracion": "04/55",
+        "cvv": 584,
+        "listaCarrito": [
+            {
+                "item": {
+                    "id": 4,
+                    "nombre": "Remera Manga Larga",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera de manga larga para climas frescos.",
+                    "precio": 28,
+                    "talles": [
+                        "S",
+                        "M",
+                        "L"
+                    ],
+                    "calificacion": 4.2,
+                    "imagen": "imagenes/reme4.png"
+                },
+                "cantidad": 2
+            },
+            {
+                "item": {
+                    "id": 6,
+                    "nombre": "Remera con Capucha",
+                    "categoria": "Remeras",
+                    "descripcion": "Remera con capucha, ideal para un look urbano.",
+                    "precio": 38,
+                    "talles": [
+                        "S",
+                        "M",
+                        "L"
+                    ],
+                    "calificacion": 4.4,
+                    "imagen": "imagenes/reme6.png"
+                },
+                "cantidad": 2
+            }
+        ],
+        "id": "m8hif002"
+    }
+]
