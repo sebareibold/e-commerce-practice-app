@@ -52,29 +52,6 @@ router.get("/:idProducto", (req, res) => {
 });
 
 
-// Endpoint GET: Obtener productos por categoria
-router.get("/:categoria", (req, res) => {
-  let { categoria } = req.params;
-
-  // Validación para la categoría
-  if (categoria && typeof categoria !== "string") {
-    return res
-      .status(400)
-      .send({ message: "El parámetro 'categoria' debe ser un string" });
-  }
-
-  if (categoria) {
-    const productosDeCategoria = obtenerProductosPorCategoria(categoria);
-    if (productosDeCategoria.length === 0) {
-      return res.status(404).send("No existen productos en esta categoría");
-    }
-    return res.send(productosDeCategoria);
-  } else {
-    const productos = obtenerJSON();
-    return res.send(productos);
-  }
-});
-
 // Endpoint POST: para agregar un producto
 router.post("/", (req, res) => {
   let productoRecibido = req.body;
@@ -162,3 +139,29 @@ router.put("/:idProducto", (req, res) => {
 });
 
 module.exports = router;
+
+
+/*
+// Endpoint GET: Obtener productos por categoria
+router.get("/:categoria", (req, res) => {
+  let { categoria } = req.params;
+
+  // Validación para la categoría
+  if (categoria && typeof categoria !== "string") {
+    return res
+      .status(400)
+      .send({ message: "El parámetro 'categoria' debe ser un string" });
+  }
+
+  if (categoria) {
+    const productosDeCategoria = obtenerProductosPorCategoria(categoria);
+    if (productosDeCategoria.length === 0) {
+      return res.status(404).send("No existen productos en esta categoría");
+    }
+    return res.send(productosDeCategoria);
+  } else {
+    const productos = obtenerJSON();
+    return res.send(productos);
+  }
+});
+*/
