@@ -13,7 +13,6 @@ Este proyecto fue desarrollado utilizando las siguientes tecnologías:
 
 ## 📸 Capturas de Pantalla
 
-_capturas de pantalla de tu aplicación_
 
 ## 🛠️ Cómo instalar el proyecto
 
